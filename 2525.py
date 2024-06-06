@@ -2,12 +2,10 @@ import sys
 input = sys.stdin.readline
 print = sys.stdout.write
 
-A, B = map(int, input().split())
-C = int(input())
-temp1 = C // 60
-temp2 = C % 60
-hour = A + temp1
-minute = B + temp2
+H, M = map(int, input().split())
+timer = int(input())
+hour = H + timer // 60
+minute = M + timer % 60
 
 while minute >= 60:
     hour += 1

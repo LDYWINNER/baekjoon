@@ -1,10 +1,5 @@
-x = int(input())
-y = int(input())
-if x > 0 and y > 0:
+a = int(input())
+if (a % 400 == 0) or (a % 4 == 0 and a % 100 != 0):
     print(1)
-elif x < 0 and y > 0:
-    print(2)
-elif x < 0 and y < 0:
-    print(3)
 else:
-    print(4)
+    print(0)
