@@ -1,18 +1,20 @@
 import sys
 input = sys.stdin.readline
 
-x = int(input())
+num = int(input())
+line = 1
 
-numMade = 5
-temp = 4
-while True:
-    if x == 1:
-        print("1/1")
-        break
+while num > line:
+    num -= line
+    line += 1
 
-    if x < numMade:
-        numSum = temp // 4 + 1
+# 짝수일경우
+if line % 2 == 0:
+    a = num
+    b = line - num + 1
+# 홀수일경우
+elif line % 2 == 1:
+    a = line - num + 1
+    b = num
 
-    else:
-        numMade += temp
-        temp += 4
+print(f'{a}/{b}')
